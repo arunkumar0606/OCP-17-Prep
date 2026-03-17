@@ -50,11 +50,13 @@ class Imports{
     }
 }
 
+/*
+can modify instance across all objects
+ */
 class InstanceInitializer{
     private int age=0;
     {age=15;}
     public static void main(String[] args) {
-
         InstanceInitializer instanceInitializer1 = new InstanceInitializer();
         instanceInitializer1.age=10;
         System.out.println(instanceInitializer1.age);  //10
@@ -63,3 +65,39 @@ class InstanceInitializer{
         System.out.println(instanceInitializer2.age);  //15
     }
 }
+
+/*
+Order of instance init block
+ */
+/* OP
+static 1
+static 2
+main 1
+Ins 1
+Cons 1
+main 2
+ */
+class InstanceInitOrder{
+    {
+        System.out.println("Ins 1");
+    }
+    static {
+        System.out.println("static 1");
+    }
+    static {
+        System.out.println("static 2");
+    }
+    public InstanceInitOrder(){
+        System.out.println("Cons 1");
+    }
+    public static void main(String[] args) {
+        {
+            System.out.println("main 1");
+        }
+        InstanceInitOrder instanceInitOrder=new InstanceInitOrder();
+        {
+            System.out.println("main 2");
+        }
+    }
+}
+
