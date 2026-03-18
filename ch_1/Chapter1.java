@@ -1,8 +1,7 @@
 package ch_1;
-import java.util.*;
 import java.util.List;
-//Public Class name should be same as file name --> Sample.java else Doesnt' compile
-public class Sample {
+//Public Class name should be same as file name --> Chapter1.java else Doesnt' compile
+public class Chapter1 {
    public static void main( String []  args) {
         //single line comment
 
