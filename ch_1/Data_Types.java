@@ -8,6 +8,8 @@ boolean
 char
  */
 
+import java.util.List;
+
 // Local variables do not have default values, they must be initialized before use
 public class Data_Types {
     byte b;
@@ -82,5 +84,109 @@ class Conversion{
     public static void main(String[] args) {
         System.out.println("String to Integer using valueOf: " + iObj);
         System.out.println("String to int using parseInt: " + parsedInt);
+    }
+}
+
+
+class Strings{
+    public static void main(String[] args) {
+        String s = """
+                arun
+               kumar
+               """;
+        System.out.print(s);
+        System.out.println("------------------");
+        String d = """
+                arun \
+                kumar
+                """;
+        System.out.print(d);
+
+        String block = """
+                "doe\"\"\"
+                \"deer\"""
+                """;
+        System.out.print("*"+ block + "*");
+    }
+}
+
+/*
+VARIABLE NAME RULES
+1) start/end with letter, $ or _
+2) No start with digit
+3) can contain letters, digits, $ and _
+4) cannot be a reserved keyword
+5) cannot have single '_'
+ */
+
+class VariableNames {
+    static int _var_ = 10;
+    static int $var$ = 20;
+    static int var3__= 30;
+    // INVALID:  2var, var-1, var 1, _ (single underscore)
+
+
+    /*
+    Declaring multiple variables in a single line
+     */
+    int a=10,b=10;
+    int c=10,d;
+    int e=10;int f=10;
+
+    // int c=10,int d=10; -> invalid
+    // int c=10;d=10; -> invalid
+
+    public static void main(String[] args) {
+        System.out.println("_var1: " + _var_);
+        System.out.println("$var2: " + $var$);
+        System.out.println("var3: " + var3__);
+    }
+}
+
+
+/*
+Local variables : Must be initialized before use, no default values
+Reason : These are stored in stack and not heap . May give incorrect values if not initialized
+ */
+
+class LocalVariables {
+    public static void main(String[] args) {
+        int localVar; // Declaration without initialization
+        //System.out.println(localVar);  // Error: variable localVar might not have been initialized
+
+        localVar = 10; // Initialization
+        System.out.println("Local variable value: " + localVar); // Output: Local variable value: 10
+    }
+}
+
+
+/*
+VAR keyword -> works only when declaring local variables inside methods, blocks, or loops
+ */
+
+class VarKeyword {
+    public static void main(String[] args) {
+        var num = 10; // Inferred as int
+        var list = List.of(1, 2, 3); // Inferred as List<Integer>
+       // var str =null; // Inferred as Object, can be assigned any type later
+        System.out.println("num: " + num);
+        for(var item : list) {
+            System.out.println("item: " + item);
+        }
+    }
+}
+
+
+/*
+System.gc() -> does not guarantee gc
+ */
+
+class Test {
+    public static void main(String[] args) {
+        Test t1 = new Test();
+        Test t2 = t1;
+
+        t1 = null; // object NOT eligible for GC
+        //t2 points to t1 object
     }
 }
