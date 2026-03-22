@@ -1,6 +1,8 @@
 package ch_7;
 
 
+import java.util.HashSet;
+
 /*
  ; at end optional
  public / package access
@@ -101,3 +103,55 @@ sealed interface Front_end permits React,Angular{}
 non-sealed interface React extends Front_end{}
 
 final class Angular implements Front_end{};
+
+/*
+Records
+Java automatically adds
+Constructor , accessing fields , toString(), hashCode() , equals()
+implicitly final
+can implement interface
+can have long/ compact constructor
+Long constructor  - jvm automatically inserts it
+Overloading constructor also possible
+ */
+record Arunr (){} ; //valid - nothing
+
+// we can have static variable inside
+record Employee(String name ,int age){
+    static int year=2026;
+    //public int size; // DOES NOT COMPILE
+    //private boolean friendly; // DOES NOT COMPILE
+}
+
+class Sampli{
+    public static void main(String[] args) {
+        HashSet<Employee> set = new HashSet<>();
+        var e1= new Employee("arun",24);
+        var e2= new Employee("arun",24);
+        set.add(e1);
+        set.add(e2);
+        System.out.println("Set Size : "+set.size()); //1 becuz equals() is overidden
+        System.out.println(e1);
+        System.out.println(e1.age());
+        System.out.println(e1.name());
+        System.out.println(Employee.year);
+    }
+}
+
+//Compact constructors
+// used for validations / transformations
+// no parenthesis
+record Name (String name){
+    public Name{
+        name = name.toUpperCase();
+    }
+}
+
+class Simple{
+    public static void main(String[] args) {
+        var name  = new Name("arun");
+        System.out.println(name.name());
+    }
+}
+
+
