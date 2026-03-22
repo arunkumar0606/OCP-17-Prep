@@ -11,6 +11,8 @@ public class AbstractClassExample {
 6) return type - covariant rule
 7) Access specifiers follow same - top close , bottom wide
 8) At least one abstract method is optional not mandatory
+9) abstract class - public / default
+10) abstract method -public/default/protected
  */
 abstract class Company {
 
@@ -19,7 +21,7 @@ abstract class Company {
     public Company(int name){
         targetYear=name;
     }
-    public abstract CharSequence currentJob();
+    abstract CharSequence currentJob();
 
     public void getOpenings() {
         System.out.println(currentJob());
