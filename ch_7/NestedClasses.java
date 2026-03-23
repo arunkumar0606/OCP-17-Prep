@@ -6,6 +6,8 @@ public class NestedClasses {
 Four types
 1. Inner class
 2. Static nested class
+3. Local inner class
+4. Anonymous inner class
  */
 
 /*
