@@ -154,3 +154,27 @@ class DequeStack{
         System.out.println(stack.peek());  //null
     }
 }
+
+/*
+Map  - not part of collections
+ */
+
+class Dummy{
+    public static void main(String[] args) {
+        Map<String,Integer> map = new HashMap<>();
+        map.put("arun",1);
+        map.put("kumar",2);
+        map.put("kumar",3);
+
+        System.out.println(map.entrySet());
+        System.out.println(map.getOrDefault("ak",5));
+        Integer replace = map.replace("kumar",20);
+        System.out.println(replace);  //3
+        map.forEach((a,b)-> System.out.println(a+b));
+        map.entrySet().forEach(x-> System.out.println(x.getKey()));
+
+        //merge function
+        // if return is null , it removes from map
+        // if computation is null , it maps directly
+    }
+}
