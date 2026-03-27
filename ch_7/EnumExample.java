@@ -116,7 +116,7 @@ Overloading constructor also possible
  */
 record Arunr (){} ; //valid - nothing
 
-// we can have static variable inside
+// we can have only static variable inside
 record Employee(String name ,int age){
     static int year=2026;
     //public int size; // DOES NOT COMPILE

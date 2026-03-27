@@ -27,7 +27,7 @@ class Moo extends Front implements Back{
     public static void main(String[] args) {
         System.out.println("--moo reference --");
         Moo m = new Moo();
-        m.backMethod();
+        m.backMethod(); //back baby...
         m.frontMethod();
         System.out.println(m.age);
 
@@ -87,7 +87,7 @@ class Penguin {
  class CrestedPenguin extends Penguin {
     public static int getHeight() { return 8; }
     public static void main(String... fish) {
-        new CrestedPenguin().printInfo();
+        new CrestedPenguin().printInfo(); //3
     }
 }
 
@@ -119,9 +119,9 @@ class Moon extends Sun{
         System.out.println(s.temp);
 
         Sun s1 = new Moon();
-        s1.produces(); //coolness
+        s1.produces(); //coolness //polymorphed at runtime
         s1.staticProduces(); // HEAT
-        System.out.println(s.temp); //polymorphed at runtime
+        System.out.println(s.temp); //2000
         //System.out.println(s.degree); //not accesible
 
         Moon m = new Moon();

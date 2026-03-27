@@ -42,12 +42,12 @@ class Other{
         System.out.println(Arrays.compare(new String[] {"a"}, new String[] {"aa"})); //-1
         System.out.println(Arrays.compare(new String[] {"a"}, new String[] {null})); //1
         System.out.println("mismatch()");
-        System.out.println(Arrays.mismatch(new int[] {1,2}, new int[] {2,9,9})); //-1
-        System.out.println(Arrays.mismatch(new int[] {1,2}, new int[] {1,2})); //0
+        System.out.println(Arrays.mismatch(new int[] {1,2}, new int[] {2,9,9})); //0
+        System.out.println(Arrays.mismatch(new int[] {1,2}, new int[] {1,2})); //-1
         System.out.println(Arrays.mismatch(new int[] {1,2}, new int[] {1,1})); //1
-        System.out.println(Arrays.mismatch(new String[] {"a"}, new String[] {"A"})); //32
-        System.out.println(Arrays.mismatch(new String[] {"a"}, new String[] {"aa"})); //-1
-        System.out.println(Arrays.mismatch(new String[] {"a"}, new String[] {null})); //1
+        System.out.println(Arrays.mismatch(new String[] {"a"}, new String[] {"A"})); //0
+        System.out.println(Arrays.mismatch(new String[] {"a"}, new String[] {"aa"})); //0
+        System.out.println(Arrays.mismatch(new String[] {"a"}, new String[] {null})); //0
 
 
         System.out.println(Math.round( 0.5));  //  1

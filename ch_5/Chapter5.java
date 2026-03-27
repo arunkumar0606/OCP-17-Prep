@@ -26,7 +26,7 @@ public class Chapter5 {
     }
 }
 
-
+//Static method cant access instance variables
 class StaticExample{
     private static int staticCount;
     private int count;

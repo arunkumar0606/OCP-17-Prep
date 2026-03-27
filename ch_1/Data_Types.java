@@ -81,6 +81,11 @@ class Conversion{
     static String str = "123";
     static int parsedInt = Integer.parseInt(str); // Parsing
 
+    static String weird = "1_23";
+//    static Integer i1= Integer.valueOf(weird); //error
+//    static int i2= Integer.parseInt(weird);   //error
+
+
     public static void main(String[] args) {
         System.out.println("String to Integer using valueOf: " + iObj);
         System.out.println("String to int using parseInt: " + parsedInt);
