@@ -108,6 +108,54 @@ class Promotion {
 }
 
 /*
+Operator precedence
+int b=2;
+int a = 1+ 2 * 3 / 5 % 2 + b--;
+
+1)b--
+2)* / %
+3)+
+ */
+class Precedence{
+    public static void main(String[] args) {
+        int b= 2;
+        int c = 2+ b--;
+        System.out.println(b); // 1
+        int d = 2 + --b;
+        System.out.println(c); //4
+        System.out.println(d); //2
+        System.out.println(b); //0
+
+        b=2;
+        int e = 1 + 3 * 3 / 3 % 3 + --b;
+        System.out.println(e); // 2
+
+        //same-> 0 , false
+        //diff-> 1 , true
+        int f = 2 ^ 2;
+        int g = 2 ^ 3;
+        System.out.println(f); //0
+        System.out.println(g); //1
+    }
+}
+
+ class OrComparison{
+
+     public static void main(String[] args) {
+         int a= 2;
+         int b= 2;
+
+         boolean c = (--a<3) | (--a<3) | (--a<3);
+         System.out.println(a); //-1
+
+         boolean d = (--b<3) || (--b<3);
+         System.out.println(b); //1
+
+     }
+
+ }
+
+/*
 Instance of operator
 instanceof checks if an object is an instance of a class, subclass, or implements an interface.
 

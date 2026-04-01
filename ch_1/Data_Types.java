@@ -23,13 +23,13 @@ public class Data_Types {
     public static void main(String[] args) {
         Data_Types dt = new Data_Types();
         System.out.println("Default values of primitives");
-        System.out.println("byte: " + dt.b);
-        System.out.println("short: " + dt.s);
-        System.out.println("int: " + dt.i);
-        System.out.println("long: " + dt.l);
-        System.out.println("float: " + dt.f); // doesn't print f at the end
-        System.out.println("double: " + dt.d);
-        System.out.println("boolean: " + dt.bo);
+        System.out.println("byte: " + dt.b); //0
+        System.out.println("short: " + dt.s); //0
+        System.out.println("int: " + dt.i); //0
+        System.out.println("long: " + dt.l); //0
+        System.out.println("float: " + dt.f); //0.0 doesn't print f at the end
+        System.out.println("double: " + dt.d); //0.0
+        System.out.println("boolean: " + dt.bo); // false
         System.out.println("char " +String.format("\\u%04x", (int) dt.c));  // \u0000
     }
 }
@@ -95,6 +95,8 @@ class Conversion{
 
 class Strings{
     public static void main(String[] args) {
+
+        //String t = """arun""";  // invalid """ should be first line nothing else required at start
         String s = """
                 arun
                kumar
@@ -173,7 +175,7 @@ class VarKeyword {
     public static void main(String[] args) {
         var num = 10; // Inferred as int
         var list = List.of(1, 2, 3); // Inferred as List<Integer>
-       // var str =null; // Inferred as Object, can be assigned any type later
+        //var str =null; // Compile Error
         System.out.println("num: " + num);
         for(var item : list) {
             System.out.println("item: " + item);

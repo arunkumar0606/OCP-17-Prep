@@ -1,6 +1,7 @@
 package Ch_11;
 
 
+import java.io.Closeable;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.CompactNumberFormat;
@@ -30,7 +31,7 @@ public class Resources {
 }
 
 //3)Custom class should implement autoCloseable interface
-class Omg implements AutoCloseable{
+class Omg implements AutoCloseable {
 
     @Override
     public void close() {
