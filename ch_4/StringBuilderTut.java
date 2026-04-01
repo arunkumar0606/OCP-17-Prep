@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 public class StringBuilderTut {
     public static void main(String[] args) {
+        var one = new StringBuilder();
+        var two = new StringBuilder();
+        var three = one.append("a");
+        System.out.println(one == two); // false
+        System.out.println(one == three); // true
+
         StringBuilder sb = new StringBuilder("hello");
         sb.append(" world");
         System.out.println(sb); // hello world
@@ -11,7 +17,11 @@ public class StringBuilderTut {
         sb.insert(5, ",");
         System.out.println(sb); // hello, world
 
+        System.out.println(sb.substring(0,5)); // hello
+        sb.charAt(0); //h
+
         sb.delete(0,5);
+
         System.out.println(sb); //, world
 
         //sb.replce("world", "java"); // error: cannot find symbol
@@ -22,7 +32,15 @@ public class StringBuilderTut {
     //String pool - a special area in memory where string literals are stored.
     // intern () - makes it to store in string pool
 }
-
+class Binary{
+    public static void main(String[] args) {
+        //if element is not found returns -> - (match index + 1)
+        int [] arr ={0,1,3,4};
+        System.out.println(Arrays.binarySearch(arr,0)); //0
+        System.out.println(Arrays.binarySearch(arr,2)); //-3
+        System.out.println(Arrays.binarySearch(arr,5)); //-5
+    }
+}
 class Other{
     public static void main(String[] args) {
         String[] strings = { "stringValue" };
@@ -34,6 +52,7 @@ class Other{
         2) mismatch()
          */
 
+        //null < "A" < "a"
         System.out.println("compare()");
         System.out.println(Arrays.compare(new int[] {1,2}, new int[] {2,9,9})); //-1
         System.out.println(Arrays.compare(new int[] {1,2}, new int[] {1,2})); //0
@@ -50,6 +69,7 @@ class Other{
         System.out.println(Arrays.mismatch(new String[] {"a"}, new String[] {null})); //0
 
 
+        ///Math.round() -> returns long
         System.out.println(Math.round( 0.5));  //  1
         System.out.println(Math.round(-0.5));  //  0  ← not -1!
         //int  c = Math.round(3.5);    // ❌ won't compile — double returns long!

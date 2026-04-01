@@ -39,6 +39,8 @@ Switch statement: RULES
 6) case values should be constant - final
 7) Supported cases : byte, short, char, int, String, enum , var, wrapper classes of byte, short, char, int
  */
+
+//switch doesn't support 'continue' keyword
 class SwitchStatement{
         public static void main(String[] args) {
             int day = 1;
@@ -105,8 +107,10 @@ class Loops{
             }
             //above loops are same as ++i and i++ have same effect in for loop
 
-
-
+            //does not compile while() accepts only boolean
+            int a=2;
+           // while(a){
+        //}
         }
 }
 

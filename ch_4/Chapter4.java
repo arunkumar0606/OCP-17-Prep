@@ -84,9 +84,9 @@ public class Chapter4 {
          */
 
         var ans = "arun";
-        System.out.println(ans.length());
-        System.out.println(ans.indent(1).length()); // " " at start , '/n' at end
-        System.out.println(ans.indent(-1).length()); // '/n' at end
+        System.out.println(ans.length()); //4
+        System.out.println(ans.indent(1).length()); // 6 " " at start , '/n' at end
+        System.out.println(ans.indent(-1).length()); // 5 '/n' at end
 
         System.out.println("----------------------------------");
         String mul = "arun \n kumar";
@@ -126,13 +126,6 @@ public class Chapter4 {
         // String formatting
         //"arun" + "kumar"  >  "arun" + variable  >  String.format()  =  .formatted()
         //     fastest                                                        slowest
-
-
-
-
-
-
-
 
     }
 }
