@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-//throws can be added even when no exception is thrown
+//throws can be added even when no exception is thrown in the method
 //Exception is a object and can be stored in a variable
 public class ExceptionsExample {
     public static void hello() throws IOException {
@@ -48,6 +48,13 @@ class Example {
         // }
     }
 }
+/*
+Checked exceptions
+FileNotfoundException
+NotSerializableExcpetion 
+Ioexception
+
+ */
 
 /*
 Exceptions with method overriding
@@ -106,6 +113,8 @@ class Simple {
         } catch (IOException e) {             // superclass
             System.out.println("IO error");
         } catch (Exception e) {               // root of all checked
+            System.out.println("Some exception");
+        }catch (Throwable e) {               // root of all everything
             System.out.println("Some exception");
         }
 

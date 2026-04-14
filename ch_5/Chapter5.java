@@ -6,6 +6,7 @@ public class Chapter5 {
     Methods
     1) method signature - setName(String name)
     2) method body - { this.name = name; }
+    3) Method names follow variable name rules
      */
     public void setName(String name){
         //final variable - cannot be reassigned after initialization
@@ -86,7 +87,7 @@ class Test{
 
 //Method overloading - same method name but different parameters
 
-//Object > Long > Int > Short
+//Object > Wrapper class > Long > Int > Short
 //Object > String
 //Auto-boxing happens internally
 class OverloadingExample{
@@ -98,6 +99,10 @@ class OverloadingExample{
     }
     public void display(long l) {
         System.out.println("Long: " + l);
+    }
+
+    public void display(Integer i){
+        System.out.println("Integer : "+ i);
     }
 
     public void display(String s){

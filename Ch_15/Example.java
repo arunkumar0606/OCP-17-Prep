@@ -48,7 +48,6 @@ public class Example {
         2)cs.registerOutParameter(1, Types.INTEGER);
         Both are required
          */
-
         //Commit & rollback
         /*
         SavePoints

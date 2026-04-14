@@ -13,6 +13,7 @@ public class AbstractClassExample {
 8) At least one abstract method is optional not mandatory
 9) abstract class - public / default
 10) abstract method -public/default/protected
+11) abstract class can have constructors
  */
 abstract class Company {
 
@@ -33,7 +34,7 @@ class Zuci extends Company{
         super(yr);
     }
     @Override
-    public String currentJob(){
+     public String currentJob(){
         return "Java,Microservices";
     }
 }

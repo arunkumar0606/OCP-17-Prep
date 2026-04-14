@@ -98,7 +98,6 @@ class ListExample{
         System.out.println(sample);
         sample.remove(Integer.valueOf(2)); // removes element
         System.out.println(sample);
-
         //SET
         // 2 ways  - Set.of() , Set.CopyOf()
     }

@@ -32,7 +32,6 @@ public class Concurrency {
         //Thread.interrupt () is a way to tell  a thread to stop
     }
 }
-
 /*
 ExecutorService
  */
@@ -44,7 +43,6 @@ class Sample{
         exe.submit(()-> System.out.println("hello"));
         //Executor.shutdown() does not end process , it doesn't allow new tasks
         //Future object for Runnable is Null //future.get() -> null
-
         var service = Executors.newSingleThreadExecutor();
         try {
             Future<Integer> result = service.submit(() ->

@@ -145,3 +145,13 @@ class Dummy{
         System.out.println(addAndMul.apply(2));
     }
 }
+class Hello{
+    public Hello(){
+        System.out.println("hiu");
+
+    }
+    public void Hello(){
+        System.out.println("hello");
+    }
+}
+

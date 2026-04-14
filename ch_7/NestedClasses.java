@@ -19,6 +19,7 @@ class A {
     private int out=5;
 
     private class B{
+
         private int value=out+50;
 
         private void hello(){

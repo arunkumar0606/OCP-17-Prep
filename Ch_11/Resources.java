@@ -11,16 +11,16 @@ import java.text.ParseException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-
 /*
 try-with-resources
-1) should have semicolon at end
-2)catch and finally are optional
+1) should have semicolon between resources
+2) catch and finally are optional
 3) Parameter can accept final / effectively final
+4) var is allowed
  */
 public class Resources {
     public static void main(String[] args) throws Exception {
-        try(var in = new FileReader("Ch_11/Hello.txt");){
+        try(var in = new FileReader("Ch_11/Hello.txt")){
             int c=0;
             while((c=in.read())!=-1){
                System.out.print((char)c);
@@ -30,8 +30,8 @@ public class Resources {
     }
 }
 
-//3)Custom class should implement autoCloseable interface
-class Omg implements AutoCloseable {
+//3)Custom class should implement Closable / autoCloseable interface
+class Omg implements Closeable {
 
     @Override
     public void close() {

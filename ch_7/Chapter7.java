@@ -16,7 +16,7 @@ Only interface can have 'default' keyword method , must have body
 interface Some{}  //valid
 
 interface Company{  //default / public
-     void recruit();  //public abstract - implicit
+    void recruit();  //public abstract - implicit
      int year=5; // public static final int year = 5; - implicit
 }
 

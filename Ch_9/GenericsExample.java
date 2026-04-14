@@ -48,7 +48,7 @@ class Bricks{
         return "Bricks..";
     }
 }
-class Customer{
+class Customer {
     public static void main(String[] args) {
         Concrete concrete = new Concrete();
         Bricks bricks = new Bricks();
@@ -59,15 +59,17 @@ class Customer{
         Truck<Bricks> bricksTruck = new Truck<>();
         bricksTruck.setLoad(bricks);
         bricksTruck.startJourney();
+//        []String lions = new String[];
+//        String[] tigers = new String[1]{};
+//        String bears[] = new String[] {};
+//        String ohMy [] = new String[] {};
 
     }
 }
-
 //Generic interface also possible
 interface  Some <T>{
     public T hello();
 }
-
 //Generics can be used with records
 /*
 Bounding generics
